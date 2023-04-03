@@ -52,6 +52,11 @@ class PetTypeFormatterTests {
 	}
 
 	@Test
+	void testFlaky() {
+		assertTrue(shouldReturnTrue());
+	}		
+
+	@Test
 	void testSometimesTrue() {
 		assertTrue(shouldReturnTrue());
 	}	
