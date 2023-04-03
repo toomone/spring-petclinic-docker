@@ -54,17 +54,16 @@ class PetTypeFormatterTests {
 	@Test
 	void testFlaky() {
 		assertTrue(shouldReturnTrue());
-	}		
+	}
 
 	@Test
 	void testSometimesTrue() {
 		assertTrue(shouldReturnTrue());
-	}	
+	}
 
-    private boolean shouldReturnTrue() {
-        return Math.random() < 0.8; // 95% chance of returning true
-    }
-
+	private boolean shouldReturnTrue() {
+		return Math.random() < 0.8; // 95% chance of returning true
+	}
 
 	@Test
 	void testPrint() {
