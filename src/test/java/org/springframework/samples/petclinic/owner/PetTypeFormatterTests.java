@@ -17,6 +17,7 @@
 package org.springframework.samples.petclinic.owner;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.BDDMockito.given;
 
 import java.text.ParseException;
@@ -51,10 +52,19 @@ class PetTypeFormatterTests {
 	}
 
 	@Test
+	void testSometimesTrue() {
+		assertTrue(shouldReturnTrue());
+	}	
+
+    private boolean shouldReturnTrue() {
+        return Math.random() < 0.8; // 95% chance of returning true
+    }
+
+
+	@Test
 	void testPrint() {
 		PetType petType = new PetType();
 		petType.setName("Hamster");
-		petType.setName("Dog");
 		String petTypeName = this.petTypeFormatter.print(petType, Locale.ENGLISH);
 		assertThat(petTypeName).isEqualTo("Hamster");
 	}
