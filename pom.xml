@@ -312,7 +312,7 @@
       <properties>
         <dd.java.agent.arg>
           -javaagent:${settings.localRepository}/com/datadoghq/dd-java-agent/1.11.2/dd-java-agent-1.11.2.jar
-          -Ddd.service=petclinic-app
+          -Ddd.service=petclinic
           -Ddd.civisibility.enabled=true
         </dd.java.agent.arg>
       </properties>
